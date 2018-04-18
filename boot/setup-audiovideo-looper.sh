@@ -21,10 +21,12 @@ sudo apt-get update
 sudo apt-get install -y git
 
 # Install video looper application
-git clone https://github.com/brutesque/pi_video_looper.git ~/pi_video_looper
-pushd ~/pi_video_looper
-sudo ./install.sh
-popd
+if [ ! -d "~/pi_video_looper" ]; then
+	git clone https://github.com/brutesque/pi_video_looper.git ~/pi_video_looper
+	pushd ~/pi_video_looper
+	sudo ./install.sh
+	popd
+fi
 
 # Setup video looper application
 # https://learn.adafruit.com/raspberry-pi-video-looper/installation
