@@ -29,5 +29,4 @@ if [ ! -d "~/pi_video_looper" ]; then
 fi
 
 # Setup video looper application
-mkdir /home/pi/videos
 sudo cp /boot/config_templates/video_looper.ini-seamless /boot/video_looper.ini
