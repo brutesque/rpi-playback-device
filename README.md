@@ -1,5 +1,5 @@
 # rpi-playback-device
-Create a dedicated video playback device from a raspberry pi
+Create a dedicated video playback device from a raspberry pi 3B
 
 Prepare the SD-Card
 - Download Raspbian Lite from here http://www.raspberrypi.org/downloads/
