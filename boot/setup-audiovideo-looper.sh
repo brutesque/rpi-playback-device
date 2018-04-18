@@ -5,13 +5,20 @@
 # change password
 passwd
 
+# Setup Wi-Fi
+read -p "Enter Wi-Wfi SSID: " WIFI_SSID
+if [ -n "${WIFI_SSID}" ]; then
+	read -p "Enter Wi-Wfi Password: " WIFI_PASSWORD
+	if [ -n "${WIFI_PASSWORD}" ]; then
+		wpa_passphrase "${WIFI_SSID}" "${WIFI_PASSWORD}" | sudo tee -a /etc/wpa_supplicant/wpa_supplicant.conf > /dev/null
+		sudo sed -i '/#psk="*"/d' /etc/wpa_supplicant/wpa_supplicant.conf
+		wpa_cli -i wlan0 reconfigure
+	fi
+fi
+
 # Install dependencies
 sudo apt-get update
 sudo apt-get install -y git
-
-# Install networking configs
-#sudo cp /boot/config_templates/etc/network/interfaces /etc/network
-#sudo cp /boot/config_templates/etc/modprobe.d/8192cu.conf /etc/modprobe.d/
 
 # Install video looper application
 git clone https://github.com/brutesque/pi_video_looper.git ~/pi_video_looper
