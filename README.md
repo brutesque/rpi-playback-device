@@ -20,10 +20,4 @@ In case you need the video to play seamless, use this command instead:
 ```
 There is no support for audio in the seamless setup.
 
-You should make the SD-Card readonly, so suddon power-loss will not corrupt the device
-``` bash
-/boot/read-only-fs.sh
-```
-Reboot the device, when asked.
-
-After the raspberry pi has booted again, insert a usb-drive with video files.
+After the raspberry pi has booted up, insert a usb-drive with video files.
