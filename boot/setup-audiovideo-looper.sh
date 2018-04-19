@@ -8,7 +8,7 @@ passwd
 # Setup Wi-Fi
 read -p "Enter Wi-Wfi SSID: " WIFI_SSID
 if [ -n "${WIFI_SSID}" ]; then
-	read -p "Enter Wi-Wfi Password: " WIFI_PASSWORD
+	read -s -p "Enter Wi-Wfi Password: " WIFI_PASSWORD
 	if [ -n "${WIFI_PASSWORD}" ]; then
 		wpa_passphrase "${WIFI_SSID}" "${WIFI_PASSWORD}" | sudo tee -a /etc/wpa_supplicant/wpa_supplicant.conf > /dev/null
 		sudo sed -i '/#psk="*"/d' /etc/wpa_supplicant/wpa_supplicant.conf
