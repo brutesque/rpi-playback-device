@@ -30,3 +30,6 @@ fi
 
 # Setup video looper application
 sudo cp /boot/config_templates/video_looper.ini-seamless /boot/video_looper.ini
+
+# Reboot
+sudo reboot
