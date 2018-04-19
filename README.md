@@ -22,7 +22,7 @@ There is no support for audio in the seamless setup.
 
 You should make the SD-Card readonly, so suddon power-loss will not corrupt the device
 ``` bash
-/boot/make-readonly.sh
+/boot/read-only-fs.sh
 ```
 Reboot the device, when asked.
 
