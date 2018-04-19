@@ -11,12 +11,12 @@ Insert the SD-card into the pi and boot it up
 
 Setup the player
 ``` bash
-/boot/setup-audiovideo-looper.sh
+sudo /boot/setup-audiovideo-looper.sh
 ```
 
 In case you need the video to play seamless, use this command instead:
 ``` bash
-/boot/setup-seamless-looper.sh
+sudo /boot/setup-seamless-looper.sh
 ```
 There is no support for audio in the seamless setup.
 
