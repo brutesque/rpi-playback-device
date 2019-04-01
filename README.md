@@ -7,7 +7,7 @@ Prepare the SD-Card
 - Copy all the files and folders in 'boot' to the root of the SD-Card
 - Unmount the SD-Card from your pc
 
-Insert the SD-card into the pi and boot it up
+Insert the SD-card into the pi and boot it up. Make sure the pi is connected to the internet.
 
 Setup the player
 ``` bash
